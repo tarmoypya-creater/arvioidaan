@@ -1,8 +1,1 @@
-{
-  "routes": [
-    {
-      "src": "/",
-      "dest": "https://kiinteist-arvio-botti-1046612943044.us-west1.run.app"
-    }
-  ]
-}
+
