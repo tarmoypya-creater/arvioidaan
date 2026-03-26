@@ -1,13 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="fi">
 <head>
   <meta charset="UTF-8">
   <title>Arvioidaan.fi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+
+    #fallback {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <iframe 
+    src="https://kiinteist-arvio-botti-1046612943044.us-west1.run.app"
+    onload="iframeLoaded()"
+  ></iframe>
+
+  <div id="fallback">
+    <h2>Jos botti ei lataudu</h2>
+    <button onclick="goToBot()">Avaa botti</button>
+  </div>
 
   <script>
-    window.location.href = "https://kiinteist-arvio-botti-1046612943044.us-west1.run.app";
+    let loaded = false;
+
+    function iframeLoaded() {
+      loaded = true;
+    }
+
+    setTimeout(() => {
+      if (!loaded) {
+        document.getElementById("fallback").style.display = "block";
+      }
+    }, 2000);
+
+    function goToBot() {
+      window.location.href = "https://kiinteist-arvio-botti-1046612943044.us-west1.run.app";
+    }
   </script>
 
-</head>
-<body></body>
+</body>
 </html>
