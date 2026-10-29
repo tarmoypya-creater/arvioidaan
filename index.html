@@ -34,22 +34,6 @@
       border: none;
     }
 
-    #fallback {
-      display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-      font-family: sans-serif;
-    }
-
-    button {
-      padding: 12px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
   </style>
 </head>
 
@@ -57,31 +41,7 @@
 
   <iframe title="Arvioidaan.fi – asunnon suuntaa-antava arviolaskuri"
     src="https://kiintestobottiuusin-1046612943044.europe-north1.run.app"
-    onload="iframeLoaded()"
   ></iframe>
-
-  <div id="fallback">
-    <h2>Jos botti ei lataudu</h2>
-    <button onclick="goToBot()">Avaa botti</button>
-  </div>
-
-  <script>
-    let loaded = false;
-
-    function iframeLoaded() {
-      loaded = true;
-    }
-
-    setTimeout(() => {
-      if (!loaded) {
-        document.getElementById("fallback").style.display = "block";
-      }
-    }, 2000);
-
-    function goToBot() {
-      window.location.href = "https://kiintestobottiuusin-1046612943044.europe-north1.run.app";
-    }
-  </script>
 
 </body>
 </html>
