@@ -1,8 +1,163 @@
 <!DOCTYPE html>
-<html lang="fi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tietosuojaseloste – Arvioidaan.fi</title><link rel="canonical" href="https://arvioidaan.fi/tietosuoja"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>body{margin:0;background:#f6f7f9;color:#17212b;font:16px/1.65 system-ui,sans-serif}main{max-width:850px;margin:auto;padding:32px 20px}pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere}a{color:#175b93}</style></head><body><main><a href="/">Palaa alkuun</a><h1>Tietosuojaseloste</h1><pre>ARVIOIDAAN.FI — TIETOSUOJASELOSTE
-Versio: 2026-10-v1 (Päivitetty 23.10.2026)
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tietosuojaseloste — Arvioidaan.fi (2026-10-v2)</title>
+  <meta name="description" content="Arvioidaan.fi-palvelun virallinen tietosuojaseloste (Versio 2026-10-v2, laadittu 29.10.2026). Sisältää suomen-, ruotsin- ja englanninkieliset selosteet sekä Meta Pixel -evästekäytännöt." />
+  <meta name="robots" content="index,follow" />
+  <meta name="arvioidaan:policy-version" content="2026-10-v2" />
+  <meta name="arvioidaan:policy-date" content="29.10.2026" />
+  <meta name="arvioidaan:source-repo" content="tarmoypya-creater/arvioidaan-ai-studio" />
+  <meta name="arvioidaan:source-commit" content="b739cb372de57af03637a18e68c3961d3bc0c674" />
+  <link rel="canonical" href="https://arvioidaan.fi/tietosuoja" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 2rem 1rem 4rem;
+    }
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .brand:hover {
+      color: var(--accent);
+    }
+    .lang-switch {
+      display: inline-flex;
+      gap: 0.4rem;
+      background: rgba(15, 23, 42, 0.7);
+      padding: 0.25rem;
+      border-radius: 0.6rem;
+      border: 1px solid var(--border);
+    }
+    .lang-btn {
+      background: transparent;
+      color: var(--muted);
+      border: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 0.45rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .lang-btn[aria-selected="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    }
+    .version-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #93c5fd;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      padding: 0.25rem 0.65rem;
+      border-radius: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    .policy-text {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-family: inherit;
+      font-size: 0.96rem;
+      color: #e2e8f0;
+      margin: 0;
+    }
+    .lang-panel {
+      display: none;
+    }
+    .lang-panel.active {
+      display: block;
+    }
+    .footer-links {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .footer-links a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .card {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="top-bar">
+      <a class="brand" href="https://arvioidaan.fi">← Arvioidaan.fi</a>
+      <div class="lang-switch" role="tablist" aria-label="Language selection">
+        <button type="button" class="lang-btn" role="tab" id="tab-fi" aria-selected="true" aria-controls="panel-fi" onclick="setLang('fi')">Suomi (FI)</button>
+        <button type="button" class="lang-btn" role="tab" id="tab-sv" aria-selected="false" aria-controls="panel-sv" onclick="setLang('sv')">Svenska (SV)</button>
+        <button type="button" class="lang-btn" role="tab" id="tab-en" aria-selected="false" aria-controls="panel-en" onclick="setLang('en')">English (EN)</button>
+      </div>
+    </header>
 
-Tämä tietosuojaseloste kuvaa, miten Arctic Soundscapes Oy käsittelee henkilötietoja Arvioidaan.fi-verkkopalvelussa EU:n yleisen tietosuoja-asetuksen (GDPR 2016/679) mukaisesti.
+    <main class="card">
+      <div class="version-badge" id="policy-version-badge" data-policy-version="2026-10-v2" data-policy-date="29.10.2026">Versio / Version: 2026-10-v2 · 29.10.2026</div>
+
+      <!-- FINNISH (FI) -->
+      <section id="panel-fi" class="lang-panel active" role="tabpanel" aria-labelledby="tab-fi" lang="fi">
+<pre class="policy-text">ARVIOIDAAN.FI — TIETOSUOJASELOSTE
+Versio: 2026-10-v2 (Laadittu 29.10.2026)
+
+Tämä tietosuojaseloste kuvaa, miten Arctic Soundscapes Oy käsittelee henkilötietoja Arvioidaan.fi-verkkopalvelussa EU:n yleisen tietosuoja-asetuksen (GDPR 2016/679) sekä sähköisen viestinnän palveluista annetun lain mukaisesti.
 
 1. REKISTERINPITÄJÄ JA YHTEYSTIEDOT
 Ensisijainen rekisterinpitäjä (palveluntarjoaja):
@@ -24,40 +179,279 @@ Tiedot luovutetaan ensisijaisesti nimetylle kumppanille (Niko Merikko LKV Oy). K
 
 3. KERÄTTÄVÄT HENKILÖTIEDOT
 Palvelussa kerätään vain palvelun toteuttamisen kannalta välttämättömiä tietoja:
-- Yhteystiedot: Etunimi, sukunimi, puhelinnumero, sähköpostiosoite
-- Asunnon tiedot: Paikkakunta, osoite tai alue, asuntotyyppi, pinta-ala (m²), huoneluku, rakennusvuosi, myyntiaikataulu sekä järjestelmän tuottama alustava hinta-arvio
-- Suostumus- ja todisteaineisto: gdpr_consent (totuusarvo), consent_timestamp (suostumuksen tarkka UTC-aikaleima), policy_version (sovellettu selosteversio 2026-10-v1), consent_text (hyväksytty suostumusteksti sanamuotoineen), legal_basis (käsittelyperuste), external_lead_id (yksilöllinen liiditunniste)
-- Tekniset lokitiedot ja evästevalinnat
+- Yhteystiedot (vain yhteydenottopyynnön yhteydessä): Etunimi, sukunimi (valinnainen), puhelinnumero, sähköpostiosoite
+- Asunnon tiedot: Paikkakunta, osoite tai alue, asuntotyyppi, pinta-ala (m²), huoneluku, rakennusvuosi (valinnainen), myyntiaikataulu sekä sovelluksen laskema suuntaa-antava hinta-arvio
+- Suostumus- ja todisteaineisto: gdpr_consent (nimenomainen luovutussuostumus kiinteistönvälittäjälle), marketing_consent (valinnainen suoramarkkinointisuostumus sähköpostitse), consent_timestamp (suostumuksen tarkka UTC-aikaleima), policy_version (sovellettu selosteversio 2026-10-v2), consent_text (hyväksytty suostumusteksti sanamuotoineen), legal_basis (käsittelyperuste), external_lead_id (yksilöllinen liiditunniste) ja kielivalinta (locale)
+- Evästesuostumus ja tekniset tiedot: Selaimen paikalliseen muistiin (localStorage) tallennettava evästesuostumustietue (cookie_consent: välttämättömät evästeet, markkinointievästevalinta, versio ja ISO-8601-aikaleima) sekä palvelimen suojaukseen, tuplalähetysten estoon ja väärinkäytösten torjuntaan liittyvät tekniset yhteystiedot.
+- Suostumusten erillisyys: Lomakkeen suoramarkkinointilupa (marketing_consent) ja evästeasetusten markkinointievästesuostumus (cookie_consent.marketing / Meta Pixel) ovat toisistaan täysin erillisiä eivätkä aktivoi toisiaan.
 
 4. KÄSITTELYN TARKOITUKSET JA OIKEUSPERUSTEET
-- Alustavan hinta-arvion laskeminen ja esittäminen: GDPR 6 artikla 1 kohta b (sopimusta edeltävät toimet rekisteröidyn pyynnöstä).
-- Liiditietojen luovuttaminen Niko Merikko LKV Oy:lle yhteydenottoa varten: GDPR 6 artikla 1 kohta a (rekisteröidyn nimenomainen, vapaaehtoinen suostumus).
-- Valinnainen sähköpostimarkkinointi (mikäli erikseen valittu): GDPR 6 artikla 1 kohta a (vapaaehtoinen suostumus, ei ehtona arviopalvelulle).
-- Palvelun tekninen turvaaminen ja väärinkäytösten esto: GDPR 6 artikla 1 kohta f (rekisterinpitäjän oikeutettu etu).
-- Suostumuksen todentaminen valvontaviranomaiselle ja kirjanpito: GDPR 6 artikla 1 kohta c (lakisääteinen velvoite ja osoitusvelvollisuus).
+- Alustavan hinta-arvion laskeminen ja esittäminen: GDPR 6 artiklan 1 kohdan b alakohta (sopimusta edeltävät toimet rekisteröidyn pyynnöstä). Arvioidaan.fi laskee alustavan, suuntaa-antavan asunnon hinta-arvion automaattisesti käyttäjän antamien kiinteistötietojen ja alueellisten hintatietojen perusteella. Arvion laskenta tapahtuu deterministisesti sovelluksen omalla sisäisellä laskentalogiikalla ilman Google Gemini API -palvelua tai muuta ulkoista tekoälypalvelua. Ilman erillistä välittäjän yhteydenottosuostumusta arviointitietoja ei tallenneta Arvioidaan.fi:n liidirekisteriin.
+- Liiditietojen tallentaminen ja luovuttaminen Niko Merikko LKV Oy:lle yhteydenottoa varten: GDPR 6 artiklan 1 kohdan a alakohta (rekisteröidyn nimenomainen, vapaaehtoinen suostumus).
+- Valinnainen sähköpostimarkkinointi (mikäli erikseen valittu lomakkeella, marketing_consent): GDPR 6 artiklan 1 kohdan a alakohta (vapaaehtoinen suostumus, joka ei ole ehtona arviolaskurin käytölle tai arviokäynnille).
+- Markkinointievästeet ja mainonnan konversiomittaus (Meta Pixel, cookie_consent.marketing): GDPR 6 artiklan 1 kohdan a alakohta sekä sähköisen viestinnän palvelulain 205 § (käyttäjän nimenomainen suostumus evästeasetuksissa).
+- Palvelun tekninen turvaaminen, syötteiden validointi, tuplalähetysten esto ja väärinkäytösten torjunta: GDPR 6 artiklan 1 kohdan f alakohta (rekisterinpitäjän oikeutettu etu).
+- Suostumuksen todentaminen valvontaviranomaiselle ja lakisääteiset velvoitteet: GDPR 6 artiklan 1 kohdan c alakohta ja 7 artiklan 1 kohta (osoitusvelvollisuus).
 
-5. HENKILÖTIETOJEN KÄSITTELIJÄT JA LUOVUTUKSET
-- Tiedot luovutetaan rekisteröidyn suostumuksella kiinteistönvälittäjäkumppanille (Niko Merikko LKV Oy).
-- Tietoja käsitellään turvallisessa pilvi-infrastruktuurissa: Google Cloud EMEA Limited (Google Workspace / Google Sheets API), joka toimii henkilötietojen käsittelijänä voimassa olevan tietojenkäsittelysopimuksen (DPA) nojalla.
-- Tietoja ei koskaan myydä, vuokrata eikä luovuteta kolmansille osapuolille suoramarkkinointitarkoituksiin.
+5. HENKILÖTIETOJEN KÄSITTELIJÄT JA VASTAANOTTAJAT
+- Vastaanottava kiinteistönvälityskumppani: Niko Merikko LKV Oy (ainoastaan rekisteröidyn nimenomaisella suostumuksella).
+- Pilvi-infrastruktuuri ja liiditallennus: Google Cloud EMEA Limited (sovelluksen ajoalusta Google Cloud Run Suomen europe-north1-palvelinalueella sekä Google Workspace / Google Sheets API liiditietojen tallennukseen palveluntarjoajan sovellettavien tietojenkäsittelyehtojen mukaisesti).
+- Sähköpostivälitys (SMTP) ja julkinen verkkosivusto: Konfiguroitu SMTP-sähköpostipalvelu liidi-ilmoituksen välittämiseksi vastaanottavalle kumppanille sekä Vercel Inc. julkisen kehyssivuston (https://arvioidaan.fi) jakeluun.
+- Markkinointikumppani (vain erillisellä markkinointievästesuostumuksella): Meta Platforms Ireland Limited (Meta Pixel -konversiomittaus, ks. kohta 10).
+- Tietoja ei koskaan myydä, vuokrata eikä luovuteta ulkopuolisille tahoille suoramarkkinointitarkoituksiin.
 
 6. KANSAINVÄLISET TIEDONSIIRROT
-Tiedot tallennetaan ensisijaisesti EU/ETA-alueella sijaitseviin palvelinkeskuksiin. Mikäli teknisen toteutuksen alihankkijoiden globaalit tukitoiminnot edellyttävät tiedonsiirtoa EU/ETA-alueen ulkopuolelle, tiedonsiirrot suojataan Euroopan komission hyväksymillä mallisopimuslausekkeilla (SCC) ja tarvittavilla täydentävillä teknisillä suojatoimilla.
+- Ensisijainen palvelinsijainti: Varsinainen arviolaskurisovellus on sijoitettu Google Cloud Run -palveluun Suomen palvelinalueelle (europe-north1).
+- Siirrot EU/ETA-alueen ulkopuolelle: Käytettyjen pilvi-, verkkosivu- tai markkinointipalveluiden (Google, Vercel, Meta) globaaleihin tukitoimintoihin ja infrastruktuuriin voi liittyä henkilötietojen käsittelyä tai siirtoja Euroopan talousalueen (EU/ETA) ulkopuolelle, kuten Yhdysvaltoihin. Tällaisissa siirroissa noudatetaan palveluntarjoajien sovellettavissa tietosuojaehdoissa määriteltyjä GDPR V luvun mukaisia siirtoperusteita, kuten EU–U.S. Data Privacy Framework -järjestelyä ja/tai Euroopan komission hyväksymiä mallisopimuslausekkeita (Standard Contractual Clauses, SCC).
 
 7. TIETOJEN SÄILYTYSAIKA
-- Liiditietoja ja niihin liittyviä suostumuksen audit-tietoja säilytetään aktiivisesti 12 kuukautta yhteydenoton ja arviointipalvelun toteuttamisen jälkeen, minkä jälkeen tiedot poistetaan tai anonymisoidaan, ellei lainsäädäntö (kuten mahdollisen toimeksiantosopimuksen edellyttämät velvoitteet) vaadi pidempää säilyttämistä.
-- Evästevalinnat säilytetään selaimen paikallisessa muistissa enintään 12 kuukauden ajan.
+- Liiditiedot ja suostumuksen todisteaineisto: Tietoja säilytetään liidirekisterissä enintään 12 kuukautta yhteydenoton ja arviointipalvelun toteuttamisen jälkeen, minkä jälkeen tiedot poistetaan tai anonymisoidaan, ellei pakottava lainsäädäntö edellytä pidempää säilyttämistä.
+- Evästesuostumus (cookie_consent): Säilytetään selaimen paikallisessa muistissa (localStorage) enintään 12 kuukautta (365 vuorokautta) alkuperäisestä suostumushetkestä. Määräajan täytyttyä suostumus vanhenee automaattisesti ja poistetaan.
+- Meta Pixel -evästeet (_fbp, _fbc): Ensimmäisen osapuolen evästeet asetetaan vain markkinointievästesuostumuksen perusteella (oletuskesto selaimessa enintään 90 vuorokautta) ja poistetaan sovelluskoodissa välittömästi, jos käyttäjä peruuttaa suostumuksensa.
 
 8. REKISTERÖIDYN OIKEUDET
 Rekisteröidyllä on seuraavat GDPR:n mukaiset oikeudet:
-- Oikeus saada pääsy omiin tietoihinsa (tarkastusoikeus)
-- Oikeus vaatia virheellisten tai puutteellisten tietojen oikaisemista
-- Oikeus tietojen poistamiseen ("oikeus tulla unohdetuksi")
-- Oikeus käsittelyn rajoittamiseen ja vastustamiseen
-- Oikeus siirtää tiedot järjestelmästä toiseen koneluettavassa muodossa
-- Oikeus peruuttaa annettu suostumus milloin tahansa ilmoittamalla siitä osoitteeseen myynti@arvioidaan.fi. Suostumuksen peruuttaminen ei vaikuta ennen sen peruuttamista suoritetun käsittelyn lainmukaisuuteen.
-- Oikeus tehdä valitus tietosuojavaltuutetulle (Tietosuojavaltuutetun toimisto, www.tietosuoja.fi).
+- Oikeus saada pääsy omiin tietoihinsa (tarkastusoikeus, GDPR 15 art.)
+- Oikeus vaatia virheellisten tai puutteellisten tietojen oikaisemista (GDPR 16 art.)
+- Oikeus tietojen poistamiseen ("oikeus tulla unohdetuksi", GDPR 17 art.)
+- Oikeus käsittelyn rajoittamiseen ja vastustamiseen (GDPR 18 ja 21 art.)
+- Oikeus siirtää tiedot järjestelmästä toiseen koneluettavassa muodossa (GDPR 20 art.)
+- Oikeus peruuttaa annettu suostumus milloin tahansa: yhteydenotto- ja sähköpostimarkkinointisuostumuksen voi peruuttaa ilmoittamalla osoitteeseen myynti@arvioidaan.fi, ja markkinointievästesuostumuksen voi peruuttaa sivuston alalaidan "Evästeasetukset"-valikosta. Suostumuksen peruuttaminen ei vaikuta ennen peruuttamista suoritetun käsittelyn lainmukaisuuteen.
+- Oikeus tehdä valitus valvontaviranomaiselle: Tietosuojavaltuutetun toimisto (www.tietosuoja.fi).
 
 9. YHTEYDENOTOT TIETOSUOJA-ASIOISSA
-Kaikki tietosuojaa, omien tietojen tarkastamista tai poistamista koskevat pyynnöt voi lähettää sähköpostitse osoitteeseen:
-myynti@arvioidaan.fi</pre><a href="/">Palaa alkuun</a></main></body></html>
+Kaikki tietosuojaa, rekisteröidyn oikeuksien käyttöä sekä omien tietojen tarkastamista, oikaisua tai poistamista koskevat pyynnöt voi lähettää sähköpostitse osoitteeseen:
+myynti@arvioidaan.fi
+
+10. META PIXEL JA EVÄSTEKÄYTÄNNÖT (MARKKINOINTISEURANTA)
+A. SOVELLUKSEN TEKNISET SUOJATOIMET:
+- Meta Pixel -tunniste: Dataset ID 1138898902421576 (vastaanottaja: Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irlanti).
+- Tiukka suostumusperusteisuus ja sovellustason ympäristöeristys: Meta Pixel -skripti (fbevents.js) ladataan ja alustetaan sovelluskoodissa AINOASTAAN, kun käyttäjä on antanut voimassa olevan, enintään 365 vuorokautta vanhan nimenomaisen markkinointievästesuostumuksen (cookie_consent.marketing === true) JA sovellusta ajetaan hyväksytyssä suomalaisessa Cloud Run -tuotantoympäristössä (kiintestobottiuusin-1046612943044.europe-north1.run.app). Esikatselu-, kehitys- ja paikallisympäristöissä Meta Pixel on sovelluskoodissa estetty. Lomakkeen yhteydenottosuostumus (gdpr_consent) tai valinnainen sähköpostimarkkinointilupa (marketing_consent) EI aktivoi Meta Pixeliä.
+- Lähetettävät tapahtumat (PageView ja Lead): Sovellus lähettää suostumuksen jälkeen vain standardin PageView-tapahtuman (kerran sivulatausistuntoa kohden) sekä Lead-tapahtuman (AINOASTAAN sen jälkeen, kun taustapalvelin on vahvistanut liidin tallennuksen HTTP 200 -vastauksella, suojattuna tuplalähetyksiltä yksilöllisellä external_lead_id-tunnisteella). Palvelinpuolen Conversions API (CAPI) ei ole käytössä.
+- Ensimmäisen osapuolen evästeet ja tekniset tiedot: Kun Meta Pixel latautuu suostumuksella, selain muodostaa yhteyden Metan palvelimiin ja käsittelee ensimmäisen osapuolen evästetunnisteita (_fbp ja tarvittaessa _fbc), IP-osoitetta, selaimen ja laitteen otsikkotietoja sekä sivun URL-osoitetta.
+- Data-minimointi sovelluskoodissa: Sovelluksen oma koodi EI KOSKAAN lähetä asiakkaan nimeä, sähköpostiosoitetta, puhelinnumeroa, katuosoitetta, neliömäärää tai laskettua hinta-arviota Metalle tapahtumaparametreissa (Lead lähetetään tyhjällä {}-parametrilla). Sovelluskoodissa asetetaan fbq('set', 'autoConfig', false, '1138898902421576') sekä fbq.disablePushState = true ennen alustusta, eikä fbq('init')-kutsussa välitetä Advanced Matching -henkilötietoja.
+- Suostumuksen peruuttaminen ja vanhentuminen: Jos käyttäjä peruuttaa markkinointievästesuostumuksen Evästeasetuksissa tai suostumus vanhenee 365 vuorokauden kuluttua, sovellus kutsuu välittömästi fbq('consent', 'revoke') ja poistaa selaimen saatavilla olevat _fbp- ja _fbc-evästeet.
+- Iframe-synkronointi: Kun sovellus toimii https://arvioidaan.fi -sivuston iframessa, suostumusviestit validoidaan tarkan origin-sallintalistan ja alkuperäisen ISO-8601-aikaleiman perusteella ilman villikorttiosoitteita (*). Toistuva synkronointi ei koskaan pidennä alkuperäistä 365 vuorokauden voimassaoloaikaa.
+
+B. META EVENTS MANAGER -ASETUKSET JA VASTUIDEN JAKAUTUMINEN:
+- Automaattinen sivu- ja tuotetietojen keruu sekä muut automaattitoiminnot: Rekisterinpitäjän ilmoituksen mukaan Meta Events Managerin asetus "Sisällytä automaattisesti yksityiskohtaisempia sivu- ja tuotetietoja" (Automatic detailed page and product information) on kytketty pois päältä. Aiemman tarkastuksen mukaisesti myös Automatic Advanced Matching ja Automatic Event Detection ovat pois päältä, eikä palvelinpuolen Conversions API (CAPI) ole käytössä.
+- Tuotantoverkkotunnusten sallintalista (Domain Allowlist): Rekisterinpitäjän ilmoituksen mukaan Meta Events Managerin verkkotunnusten sallintalista (Domain Allowlist) on määritetty hyväksytyille tuotantotunnuksille (arvioidaan.fi, www.arvioidaan.fi sekä suomalainen Cloud Run -tuotantoisäntänimi kiintestobottiuusin-1046612943044.europe-north1.run.app).
+- Laitteella tapahtuva konversiomittaus (On-device conversion measurement): Meta Events Managerin asetuksen "Mittaa konversioita asiakkaiden laitteilla" (ilmoitettu alkamispäivä 12.11.2026) ajantasainen tila tarkistetaan ja hallinnoidaan erikseen rekisterinpitäjän toimesta Meta Events Managerissa.
+- Roolijako ja tiedonsiirrot: Meta Pixelin kautta tapahtuvan verkkosivuston tapahtumatietojen keräämisen ja Metalle välittämisen osalta Arctic Soundscapes Oy ja Meta Platforms Ireland Limited toimivat Metan sovellettavien yhteisrekisterinpitäjyysehtojen (Controller Addendum) mukaisesti. Tietojen vastaanottamisen jälkeen tapahtuvasta jatkokäsittelystä Metan omissa palveluissa vastaa Meta Platforms Ireland Limited itsenäisenä rekisterinpitäjänä tietosuojakäytäntönsä mukaisesti.</pre>
+      </section>
+
+      <!-- SWEDISH (SV) -->
+      <section id="panel-sv" class="lang-panel" role="tabpanel" aria-labelledby="tab-sv" lang="sv">
+<pre class="policy-text">ARVIOIDAAN.FI — INTEGRITETSPOLICY
+Version: 2026-10-v2 (Upprättad 29.10.2026)
+
+Denna integritetspolicy beskriver hur Arctic Soundscapes Oy behandlar personuppgifter i webbtjänsten Arvioidaan.fi i enlighet med EU:s allmänna dataskyddsförordning (GDPR 2016/679) samt lagen om tjänster inom elektronisk kommunikation.
+
+1. PERSONUPPGIFTSANSVARIG OCH KONTAKTUPPGIFTER
+Primär personuppgiftsansvarig (tjänsteleverantör):
+Arctic Soundscapes Oy
+FO-nummer: 3500150-5
+Kontakt för dataskydd och kundservice: myynti@arvioidaan.fi
+Webbplats: https://arvioidaan.fi
+
+2. MOTTAGANDE SAMARBETSPARTNER OCH DESS ROLL
+Mottagande fastighetsmäklarpartner:
+Niko Merikko LKV Oy / Kiinteistömaailma Helsingfors Böle (Helsinki Pasila)
+Kontaktperson: Niko Merikko, fastighetsmäklare AFM (LKV), köpvittne
+
+Rollfördelning:
+Arctic Soundscapes Oy agerar personuppgiftsansvarig för insamling av leads, beräkning av den preliminära värderingen och överföringen via webbtjänsten. När användaren lämnar sitt uttryckliga samtycke överförs uppgifterna till Niko Merikko LKV Oy, som efter mottagandet behandlar uppgifterna som självständig personuppgiftsansvarig för att ta kontakt, genomföra värderingsbesök och förhandla om eventuellt uppdrag.
+
+Övriga Kiinteistömaailma-kontor:
+Uppgifterna överförs primärt till den namngivna partnern (Niko Merikko LKV Oy). Eftersom varje kontor inom Kiinteistömaailma-kedjan är ett självständigt franchiseföretag och en separat juridisk person kräver en eventuell vidarebefordran till andra kontor (t.ex. på grund av geografiskt avstånd) ett separat meddelande eller samtycke från den registrerade.
+
+3. PERSONUPPGIFTER SOM SAMLAS IN
+I tjänsten samlas endast in uppgifter som är nödvändiga för att tillhandahålla tjänsten:
+- Kontaktuppgifter (endast i samband med kontaktbegäran): Förnamn, efternamn (valfritt), telefonnummer, e-postadress
+- Bostadsuppgifter: Ort, adress eller område, bostadstyp, yta (m²), rumsantal, byggår (valfritt), försäljningsschema samt applikationens beräknade preliminära marknadsvärde
+- Samtyckes- och bevisdata: gdpr_consent (uttryckligt överföringssamtycke till mäklare), marketing_consent (valfritt samtycke till direktmarknadsföring via e-post), consent_timestamp (exakt UTC-tidsstämpel), policy_version (version 2026-10-v2), consent_text (godkänd ordalydelse), legal_basis (behandlingsgrund), external_lead_id (unikt lead-ID) samt språkval (locale)
+- Kaksamtycke och tekniska uppgifter: Kakvalspost som sparas i webbläsarens lokala minne (localStorage, cookie_consent: nödvändiga kakor, val av marknadsföringskakor, version och ISO-8601-tidsstämpel) samt tekniska anslutningsuppgifter för tjänstens säkerhet, dubblettskydd och förhindrande av missbruk.
+- Åtskillnad mellan samtycken: Formulärets valfria samtycke till e-postmarknadsföring (marketing_consent) och kakinställningarnas samtycke till marknadsföringskakor (cookie_consent.marketing / Meta Pixel) är helt separata och aktiverar aldrig varandra automatiskt.
+
+4. ÄNDAMÅL OCH RÄTTSLIG GRUND FÖR BEHANDLINGEN
+- Beräkning och presentation av preliminärt värde: GDPR artikel 6.1 b (åtgärder inför avtal på den registrerades begäran). Arvioidaan.fi beräknar en preliminär, riktgivande bostadsvärdering automatiskt utifrån de bostadsuppgifter som användaren angett och regionala prisuppgifter. Beräkningen av värderingen sker deterministiskt med applikationens egen interna beräkningslogik utan tjänsten Google Gemini API eller någon annan extern AI-tjänst. Utan ett särskilt samtycke till mäklarkontakt sparas inte värderingsuppgifterna i Arvioidaan.fi:s leadregister.
+- Lagring och överföring av leadsuppgifter till Niko Merikko LKV Oy för kontakt: GDPR artikel 6.1 a (den registrerades uttryckliga, frivilliga samtycke).
+- Valfri e-postmarknadsföring (om separat vald i formuläret, marketing_consent): GDPR artikel 6.1 a (frivilligt samtycke, inte ett villkor för att använda kalkylatorn eller få ett värderingsbesök).
+- Marknadsföringskakor och konverteringsmätning (Meta Pixel, cookie_consent.marketing): GDPR artikel 6.1 a samt 205 § i lagen om tjänster inom elektronisk kommunikation (användarens uttryckliga samtycke i kakinställningarna).
+- Tjänstens tekniska säkerhet, indatavalidering, skydd mot dubbelinsändning och förhindrande av missbruk: GDPR artikel 6.1 f (den personuppgiftsansvariges berättigade intresse).
+- Verifiering av samtycke gentemot tillsynsmyndighet och lagstadgade skyldigheter: GDPR artikel 6.1 c och artikel 7.1 (ansvarsskyldighet).
+
+5. PERSONUPPGIFTSBITRÄDEN OCH MOTTAGARE
+- Mottagande fastighetsmäklarpartner: Niko Merikko LKV Oy (endast med den registrerades uttryckliga samtycke).
+- Molninfrastruktur och leadlagring: Google Cloud EMEA Limited (applikationsdrift på Google Cloud Run i Finlands europe-north1-region samt Google Workspace / Google Sheets API för lagring av leads enligt leverantörens tillämpliga databehandlingsvillkor).
+- E-postförmedling (SMTP) och publik webbplats: Konfigurerad SMTP-e-posttjänst för att förmedla leadmeddelanden till den mottagande partnern samt Vercel Inc. för leverans av den publika webbplatsen (https://arvioidaan.fi).
+- Marknadsföringspartner (endast med separat samtycke för marknadsföringskakor): Meta Platforms Ireland Limited (Meta Pixel-konverteringsmätning, se punkt 10).
+- Uppgifter säljs, hyrs eller överlåts aldrig till utomstående parter för direktmarknadsföring.
+
+6. INTERNATIONELLA DATAÖVERFÖRINGAR
+- Primär serverplacering: Den egentliga värderingsapplikationen körs på Google Cloud Run i den finska serverregionen (europe-north1).
+- Överföringar utanför EU/EES: Globala supportfunktioner och infrastruktur hos de moln-, webb- eller marknadsföringsleverantörer som används (Google, Vercel, Meta) kan innefatta behandling eller överföring av personuppgifter utanför Europeiska ekonomiska samarbetsområdet (EU/EES), såsom till USA. Vid sådana överföringar tillämpas de överföringsmekanismer enligt kapitel V i GDPR som fastställs i tjänsteleverantörernas gällande dataskyddsvillkor, såsom EU–U.S. Data Privacy Framework och/eller Europeiska kommissionens standardavtalsklausuler (SCC).
+
+7. LAGRINGSTID
+- Leadsuppgifter och tillhörande samtyckesloggar: Uppgifterna sparas i leadregistret i högst 12 månader efter kontakten och värderingstjänsten, varefter uppgifterna raderas eller anonymiseras, såvida inte tvingande lagstiftning kräver längre lagring.
+- Kaksamtycke (cookie_consent): Sparas i webbläsarens lokala minne (localStorage) i högst 12 månader (365 dygn) från den ursprungliga tidpunkten för samtycket. Efter utgången tid upphör samtycket automatiskt och raderas.
+- Meta Pixel-kakor (_fbp, _fbc): Förstapartskakor som lagras endast med samtycke till marknadsföringskakor (standardlivslängd i webbläsaren högst 90 dygn) och raderas omedelbart av applikationskoden om samtycket återkallas.
+
+8. DEN REGISTRERADES RÄTTIGHETER
+Den registrerade har följande rättigheter enligt GDPR:
+- Rätt till tillgång (registerutdrag, GDPR art. 15)
+- Rätt till rättelse av felaktiga eller ofullständiga uppgifter (GDPR art. 16)
+- Rätt till radering ("rätten att bli bortglömd", GDPR art. 17)
+- Rätt till begränsning av och invändning mot behandling (GDPR art. 18 och 21)
+- Rätt till dataportabilitet i maskinläsbart format (GDPR art. 20)
+- Rätt att när som helst återkalla lämnat samtycke: samtycke för kontakt och e-postmarknadsföring kan återkallas genom att skicka e-post till myynti@arvioidaan.fi, och samtycke för marknadsföringskakor kan återkallas via länken "Kakinställningar" i sidfoten. Återkallandet påverkar inte lagligheten av behandling som utförts före återkallandet.
+- Rätt att lämna klagomål till tillsynsmyndigheten: Dataombudsmannens byrå (Tietosuojavaltuutetun toimisto, www.tietosuoja.fi).
+
+9. KONTAKT I DATASKYDDSÄRENDEN
+Alla förfrågningar gällande dataskydd, utövande av den registrerades rättigheter samt granskning, rättelse eller radering av egna uppgifter kan skickas via e-post till:
+myynti@arvioidaan.fi
+
+10. META PIXEL OCH KAKPOLICY (MARKNADSFÖRINGSSPÅRNING)
+A. TEKNISKA SKYDDSÅTGÄRDER I APPLIKATIONSKODEN:
+- Meta Pixel-ID: Dataset ID 1138898902421576 (mottagare: Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland).
+- Strikt samtyckeskrav och kodnivåns miljöisolering: Meta Pixel-skriptet (fbevents.js) laddas och initieras i applikationskoden ENDAST när användaren har lämnat ett giltigt, högst 365 dygn gammalt uttryckligt samtycke till marknadsföringskakor (cookie_consent.marketing === true) OCH applikationen körs i den godkända finska Cloud Run-produktionsmiljön (kiintestobottiuusin-1046612943044.europe-north1.run.app). I förhandsgransknings-, utvecklings- och lokala miljöer är Meta Pixel blockerad i applikationskoden. Samtycke till mäklarkontakt (gdpr_consent) eller valfri e-postmarknadsföring (marketing_consent) aktiverar INTE Meta Pixel.
+- Insamlade händelser (PageView och Lead): Efter samtycke till marknadsföringskakor skickar applikationen endast standardhändelsen PageView (en gång per sidladdningssession) samt Lead (skickas ENDAST efter att backend-servern har bekräftat lagring av leadet med HTTP 200-svar, skyddad mot dubbletter via unikt external_lead_id). Serverbaserad Conversions API (CAPI) används inte.
+- Förstapartskakor och tekniska uppgifter: När Meta Pixel laddas med samtycke ansluter webbläsaren till Metas servrar och behandlar förstapartskakidentifierare (_fbp och i förekommande fall _fbc), IP-adress, webbläsar- och enhetsinformation samt sidans URL.
+- Dataminimering i koden: Applikationens egen kod skickar ALDRIG kundens namn, e-postadress, telefonnummer, gatuadress, kvadratmeter eller beräknat värderingsbelopp till Meta i händelseparametrar (Lead skickas med tom {} parameter). I applikationskoden sätts fbq('set', 'autoConfig', false, '1138898902421576') och fbq.disablePushState = true före initiering, och fbq('init') anropas utan personuppgifter för Advanced Matching.
+- Återkallande och utgång av samtycke: Om användaren återkallar sitt samtycke till marknadsföringskakor i Kakinställningar eller när samtycket går ut efter 365 dygn anropas omedelbart fbq('consent', 'revoke') och tillgängliga _fbp- och _fbc-kakor raderas.
+- Iframe-synkronisering: När applikationen är inbäddad på https://arvioidaan.fi valideras samtyckesmeddelanden mot en explicit lista över tillåtna ursprung (origins) och ursprunglig ISO-8601-tidsstämpel utan jokertecken (*). Upprepad synkronisering förlänger aldrig den ursprungliga giltighetstiden på 365 dygn.
+
+B. INSTÄLLNINGAR I META EVENTS MANAGER OCH ANSVARSFÖRDELNING:
+- Automatisk insamling av sid- och produktuppgifter samt övriga automatiska funktioner: Enligt uppgift från den personuppgiftsansvarige är inställningen "Inkludera automatiskt mer detaljerad sid- och produktinformation" ("Sisällytä automaattisesti yksityiskohtaisempia sivu- ja tuotetietoja") i Meta Events Manager inaktiverad. I enlighet med föregående granskning är även Automatic Advanced Matching och Automatic Event Detection avstängda, och serverbaserad Conversions API (CAPI) används inte.
+- Tillåtna produktionsdomäner (Domain Allowlist): Enligt uppgift från den personuppgiftsansvarige är domäntillåtelselistan (Domain Allowlist) i Meta Events Manager konfigurerad för de godkända produktionsdomänerna (arvioidaan.fi, www.arvioidaan.fi samt det finska Cloud Run-produktionsvärdnamnet kiintestobottiuusin-1046612943044.europe-north1.run.app).
+- Konverteringsmätning på enheten (On-device conversion measurement): Aktuell status för inställningen "Mät konverteringar på kundernas enheter" ("Mittaa konversioita asiakkaiden laitteilla", angivet startdatum 12.11.2026) kontrolleras och hanteras separat av den personuppgiftsansvarige i Meta Events Manager.
+- Rollfördelning och dataöverföringar: För insamling av händelseuppgifter på webbplatsen via Meta Pixel och överföring av dessa till Meta agerar Arctic Soundscapes Oy och Meta Platforms Ireland Limited i enlighet med Metas tillämpliga villkor för gemensamt personuppgiftsansvar (Controller Addendum). För efterföljande behandling av mottagna uppgifter i Metas egna tjänster ansvarar Meta Platforms Ireland Limited som självständig personuppgiftsansvarig i enlighet med sin integritetspolicy.</pre>
+      </section>
+
+      <!-- ENGLISH (EN) -->
+      <section id="panel-en" class="lang-panel" role="tabpanel" aria-labelledby="tab-en" lang="en">
+<pre class="policy-text">ARVIOIDAAN.FI — PRIVACY POLICY
+Version: 2026-10-v2 (Prepared: 29.10.2026)
+
+This privacy policy explains how Arctic Soundscapes Oy processes personal data in the Arvioidaan.fi online service in compliance with the EU General Data Protection Regulation (GDPR 2016/679) and the Finnish Act on Electronic Communications Services.
+
+1. DATA CONTROLLER AND CONTACT DETAILS
+Initial data controller (Service Provider):
+Arctic Soundscapes Oy
+Business ID: 3500150-5
+Privacy and customer service contact: myynti@arvioidaan.fi
+Online service: https://arvioidaan.fi
+
+2. RECEIVING PARTNER AND ROLES
+Receiving real estate agency partner:
+Niko Merikko LKV Oy / Kiinteistömaailma Helsinki Pasila
+Contact person: Niko Merikko, licensed real estate agent (LKV), public purchase witness (kaupanvahvistaja)
+
+Division of roles:
+Arctic Soundscapes Oy acts as the data controller for lead intake on the website, preliminary valuation calculation, and lead transfer execution. Upon receiving the user’s affirmative consent, lead data is transferred to Niko Merikko LKV Oy, which processes the information as an independent receiving controller to establish contact, conduct an on-site property valuation, and negotiate a brokerage agreement.
+
+Other Kiinteistömaailma branch offices:
+Data is transferred primarily to the named partner (Niko Merikko LKV Oy). Because each Kiinteistömaailma franchise branch is an independent business entity and separate legal person, any onward transfer to other branch offices (e.g., due to geographical location) requires specific prior notification or consent from the data subject.
+
+3. PERSONAL DATA COLLECTED
+The service collects only data necessary to deliver the requested services:
+- Contact details (only when submitting a contact request): First name, last name (optional), phone number, email address
+- Property information: Municipality/city, address or district, property type, floor area (m²), number of rooms, construction year (optional), sales schedule, and the preliminary market valuation calculated by the application
+- Consent and audit trail: gdpr_consent (affirmative broker transfer consent boolean), marketing_consent (optional direct email marketing consent boolean), consent_timestamp (exact UTC timestamp), policy_version (version 2026-10-v2), consent_text (exact statement consented to), legal_basis (processing basis), external_lead_id (unique lead UUID), and selected language (locale)
+- Cookie consent and technical data: Cookie preference record stored in browser localStorage (cookie_consent: necessary cookies, marketing cookie choice, version, and ISO-8601 timestamp), as well as technical connection data required for service security, duplicate submission prevention, and abuse prevention.
+- Separation of consents: Optional direct email marketing consent on the lead form (marketing_consent) and marketing cookie consent in Cookie Settings (cookie_consent.marketing / Meta Pixel) are strictly separate and never automatically activate each other.
+
+4. PURPOSES AND LEGAL BASES FOR PROCESSING
+- Calculation and display of preliminary valuation: GDPR Article 6(1)(b) (measures preparatory to contract at the data subject's request). Arvioidaan.fi calculates a preliminary, indicative property valuation estimate automatically based on the property information provided by the user and regional pricing data. The valuation calculation is performed deterministically using the application's internal calculation logic without the Google Gemini API service or any other external AI service. Without separate consent for broker contact, valuation details are not stored in the Arvioidaan.fi lead register.
+- Storage and transfer of lead details to Niko Merikko LKV Oy for contact: GDPR Article 6(1)(a) (explicit, affirmative consent).
+- Optional email marketing (if separately opted in on the form, marketing_consent): GDPR Article 6(1)(a) (freely given consent, not a precondition for using the valuation calculator or requesting a valuation visit).
+- Marketing cookies and advertising conversion measurement (Meta Pixel, cookie_consent.marketing): GDPR Article 6(1)(a) and Section 205 of the Finnish Act on Electronic Communications Services (explicit user consent in Cookie Settings).
+- Technical service security, input validation, duplicate submission prevention, and abuse mitigation: GDPR Article 6(1)(f) (legitimate interests of the controller).
+- Verification of consent to supervisory authorities and statutory obligations: GDPR Article 6(1)(c) and Article 7(1) (accountability).
+
+5. DATA PROCESSORS AND RECIPIENTS
+- Receiving real estate partner: Niko Merikko LKV Oy (solely upon the data subject's explicit consent).
+- Cloud infrastructure and lead storage: Google Cloud EMEA Limited (application hosting on Google Cloud Run in the Finland europe-north1 region, and Google Workspace / Google Sheets API for lead persistence under the provider's applicable data processing terms).
+- Email relay (SMTP) and public web frontend: Configured SMTP email service for transmitting lead notifications to the receiving partner, and Vercel Inc. for serving the public wrapper site (https://arvioidaan.fi).
+- Marketing partner (only with separate marketing cookie consent): Meta Platforms Ireland Limited (Meta Pixel conversion measurement, see Section 10).
+- Personal data is never sold, leased, or disclosed to unrelated third parties for direct marketing purposes.
+
+6. INTERNATIONAL TRANSFERS
+- Primary server location: The core valuation application is hosted on Google Cloud Run in the Finnish region (europe-north1).
+- Transfers outside the EU/EEA: Global support operations and infrastructure of cloud, hosting, or marketing providers (Google, Vercel, Meta) may involve processing or transferring personal data outside the European Economic Area (EU/EEA), such as to the United States. Where such transfers occur, they rely on the transfer mechanisms specified in the service providers' applicable data protection terms under Chapter V of the GDPR, such as the EU–U.S. Data Privacy Framework and/or European Commission Standard Contractual Clauses (SCC).
+
+7. DATA RETENTION
+- Lead records and associated consent audit trails: Retained in the lead register for up to 12 months after contact and valuation fulfillment, after which records are deleted or anonymised, unless mandatory legislation requires longer retention.
+- Cookie consent preferences (cookie_consent): Stored locally in browser localStorage for a maximum of 12 months (365 days) from the original consent timestamp, after which consent expires automatically and is removed.
+- Meta Pixel cookies (_fbp, _fbc): First-party cookies set only upon marketing cookie consent (default browser lifetime up to 90 days) and deleted immediately by application code if consent is withdrawn.
+
+8. DATA SUBJECT RIGHTS
+Under GDPR, you have the right to:
+- Access your personal data (GDPR Art. 15)
+- Request rectification of inaccurate or incomplete records (GDPR Art. 16)
+- Request erasure of personal data ("right to be forgotten", GDPR Art. 17)
+- Restrict and object to data processing (GDPR Art. 18 & 21)
+- Receive data in a structured, machine-readable format (portability, GDPR Art. 20)
+- Withdraw consent at any time: broker contact and email marketing consent can be withdrawn by emailing myynti@arvioidaan.fi, and marketing cookie consent can be withdrawn at any time via the "Cookie Settings" link in the page footer. Withdrawal does not affect the lawfulness of processing carried out prior to withdrawal.
+- Lodge a complaint with the supervisory authority: Office of the Data Protection Ombudsman (Tietosuojavaltuutetun toimisto, www.tietosuoja.fi).
+
+9. PRIVACY CONTACT
+All privacy inquiries, requests to exercise data subject rights, or access, rectification, and deletion requests can be addressed directly to:
+myynti@arvioidaan.fi
+
+10. META PIXEL & COOKIE POLICY (MARKETING MEASUREMENT)
+A. TECHNICAL SAFEGUARDS IN APPLICATION CODE:
+- Meta Pixel Dataset ID: 1138898902421576 (recipient: Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland).
+- Strict Opt-In Consent & Code-Level Environment Isolation: The Meta Pixel script (fbevents.js) is loaded and initialized by application code ONLY when the user has granted valid, non-expired (≤ 365 days old) explicit marketing cookie consent (cookie_consent.marketing === true) AND the application is running on the approved Finnish Cloud Run production hostname (kiintestobottiuusin-1046612943044.europe-north1.run.app). Meta Pixel is blocked by application code in preview, development, and localhost environments. Neither broker contact consent (gdpr_consent) nor optional email marketing opt-in (marketing_consent) activates Meta Pixel.
+- Tracked Events (PageView and Lead): Following marketing cookie consent, the application sends only standard PageView (once per page load session) and Lead (transmitted ONLY after the backend server confirms lead persistence with an HTTP 200 response, deduplicated by unique external_lead_id). Server-side Conversions API (CAPI) is not used.
+- First-Party Cookies & Technical Data: When Meta Pixel loads with consent, the browser connects to Meta servers and processes first-party cookie identifiers (_fbp and, where applicable, _fbc), IP address, standard browser/device headers, and page URL.
+- Data Minimization in Code: The application's own code NEVER sends customer names, email addresses, phone numbers, street addresses, floor area, or calculated valuation amounts to Meta in event parameters (Lead is dispatched with an empty {} payload). In application code, fbq('set', 'autoConfig', false, '1138898902421576') and fbq.disablePushState = true are set prior to initialization, and fbq('init') is called without Advanced Matching PII parameters.
+- Withdrawal & Expiration: Withdrawing marketing cookie consent in Cookie Settings or expiration after 365 days immediately invokes fbq('consent', 'revoke') and deletes accessible _fbp and _fbc cookies.
+- Iframe Synchronization: When embedded on https://arvioidaan.fi, consent messages are validated against an explicit origin allowlist and original ISO-8601 timestamp without wildcard origins (*). Repeated synchronization never extends the original 365-day retention period.
+
+B. META EVENTS MANAGER SETTINGS & CONTROLLER ROLES:
+- Automatic Detailed Page/Product Information & Automated Features: According to the data controller's notification, the Meta Events Manager setting "Automatically include more detailed page and product information" ("Sisällytä automaattisesti yksityiskohtaisempia sivu- ja tuotetietoja") is disabled. In accordance with the previous audit, Automatic Advanced Matching and Automatic Event Detection are also disabled, and the server-side Conversions API (CAPI) is not connected.
+- Production Domain Allowlist: According to the data controller's notification, the Meta Events Manager Domain Allowlist is configured for the approved production domains (arvioidaan.fi, www.arvioidaan.fi, and the Finnish Cloud Run production hostname kiintestobottiuusin-1046612943044.europe-north1.run.app).
+- On-Device Conversion Measurement: The current status of the Meta Events Manager setting "Measure conversions on customer devices" ("Mittaa konversioita asiakkaiden laitteilla", scheduled date 12.11.2026) is verified and managed separately by the data controller in Meta Events Manager.
+- Controller Roles & Data Transfers: For the collection of website event data via Meta Pixel and its transmission to Meta, Arctic Soundscapes Oy and Meta Platforms Ireland Limited act in accordance with Meta's applicable joint controller terms (Controller Addendum). Meta Platforms Ireland Limited acts as an independent data controller for any subsequent processing of received data within Meta's own services in accordance with its privacy policy.</pre>
+      </section>
+    </main>
+
+    <footer class="footer-links">
+      <span>© 2026 Arctic Soundscapes Oy (Y-tunnus: 3500150-5)</span>
+      <a href="mailto:myynti@arvioidaan.fi">myynti@arvioidaan.fi</a>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      var langs = ['fi', 'sv', 'en'];
+      for (var i = 0; i < langs.length; i++) {
+        var code = langs[i];
+        var tab = document.getElementById('tab-' + code);
+        var panel = document.getElementById('panel-' + code);
+        var isSelected = code === lang;
+        if (tab) tab.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+        if (panel) {
+          if (isSelected) {
+            panel.classList.add('active');
+          } else {
+            panel.classList.remove('active');
+          }
+        }
+      }
+      document.documentElement.lang = lang;
+    }
+
+    (function initLangFromQuery() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var qLang = (params.get('lang') || '').toLowerCase();
+        if (qLang === 'sv' || qLang === 'en' || qLang === 'fi') {
+          setLang(qLang);
+        }
+      } catch (_) {}
+    })();
+  </script>
+</body>
+</html>
